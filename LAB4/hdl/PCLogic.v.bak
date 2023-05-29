@@ -1,0 +1,10 @@
+module PCLogic( 
+	input [3:0] Rd, 
+	input Branch, RegW, 
+	output PCS);
+	
+//PCS = ((Rd == 15) & RegW) | Branch
+	
+	assign PCS = ((Rd == 15) & RegW) | Branch;
+
+endmodule 

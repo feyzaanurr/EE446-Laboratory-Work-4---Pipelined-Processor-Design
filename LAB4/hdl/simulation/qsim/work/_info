@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Melike\Desktop\feyzanur\EE446\LAB4\hdl\simulation\qsim
+vConditionalLogic
+Z1 !s100 FCiiL=6OmY<:@Jg:Ed`9P1
+Z2 ImPW>LTf4B7GDIESMM9O0Z0
+Z3 VC2QjG3^<gY?J<j[79P::j3
+Z4 dC:\Users\Melike\Desktop\feyzanur\EE446\LAB4\hdl\simulation\qsim
+Z5 w1684526727
+Z6 8LAB4.vo
+Z7 FLAB4.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|LAB4.vo|
+Z10 o-work work -O0
+Z11 n@conditional@logic
+!i10b 1
+!s85 0
+Z12 !s108 1684526728.411000
+Z13 !s107 LAB4.vo|
+!s101 -O0
+vConditionalLogic_vlg_check_tst
+!i10b 1
+Z14 !s100 jBHaokmgO;IFze=fj=Nh=3
+Z15 I[ob0z?UcY=ZcVD>_4fWk01
+Z16 VGnJLP]^FC0RiVMg8Y[T<21
+R4
+Z17 w1684526725
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 73
+R8
+r1
+!s85 0
+31
+Z20 !s108 1684526728.630000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@conditional@logic_vlg_check_tst
+vConditionalLogic_vlg_sample_tst
+!i10b 1
+Z24 !s100 FGoUoX=9Q=O3EF6D`F[[23
+Z25 IoFNInG_gPe4?XUX09614C2
+Z26 VLcl?V]SWQ_ljXN;[RTHPH0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@conditional@logic_vlg_sample_tst
+vConditionalLogic_vlg_vec_tst
+!i10b 1
+!s100 [<XHA5880Jz4[]_aZ`>_N3
+IcnWY<WmmXRIelH_Q?X;n22
+Z28 VR]iK?kK^W?@86=4@NBM?10
+R4
+R17
+R18
+R19
+Z29 L0 361
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@conditional@logic_vlg_vec_tst
+vtopmodule
+Z31 !s100 =CkVRJ^Vin<lcAiFdZA7g0
+Z32 InoMbTZ?FeCZCIfQIA9>nb1
+Z33 V9J0^;bNXNl=Iflc4`2CHI1
+R4
+Z34 w1684525919
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z35 !s108 1684525920.150000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vtopmodule_vlg_check_tst
+Z36 !s100 HmLiR0n>TAKKhRMoB]M;o0
+Z37 IeH0LLeB>1`<dVe60T60G93
+Z38 VR61<3g2kmOkGCh>Se=[zl3
+R4
+Z39 w1684525917
+Z40 8Waveform1.vwf.vt
+Z41 FWaveform1.vwf.vt
+L0 59
+R8
+r1
+31
+Z42 !s108 1684525920.384000
+Z43 !s107 Waveform1.vwf.vt|
+Z44 !s90 -work|work|Waveform1.vwf.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vtopmodule_vlg_sample_tst
+Z45 !s100 34GNm^Va>HLM29bG<ij_c3
+Z46 I:G>Y>Wa1:Xk_AZSO==b6T1
+Z47 V@CJ8kd505`CBzlboJO;?A1
+R4
+R39
+R40
+R41
+L0 29
+R8
+r1
+31
+R42
+R43
+R44
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vtopmodule_vlg_vec_tst
+Z48 !s100 hPh4l<XV`cClX[JC3^6;>2
+Z49 I?i;I75_9D6FRhO5U^jH9d2
+Z50 V^W@<8T0gR:=emEC;bhBoC2
+R4
+R39
+R40
+R41
+Z51 L0 4164
+R8
+r1
+31
+R42
+R43
+R44
+R10
+!i10b 1
+!s85 0
+!s101 -O0

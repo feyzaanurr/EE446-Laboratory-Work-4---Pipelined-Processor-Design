@@ -1,0 +1,84 @@
+module topmodule (
+	input clk, rst, run,
+	output [31:0] PC_out, RD1, RD2, data_out,
+	output wire [31:0] Inst,
+	output REGWr,
+	output [3:0] ALUCnt,
+	output [1:0] ResultS,
+	output wire [3:0] state_out);
+
+	
+wire PCEn, PCWrite;
+assign PCEn = PCWrite & run;
+
+wire [31:0] Instruction;
+
+assign Inst = Instruction;
+assign REGWr = RegWrite;
+assign ALUCnt = ALUControl;
+
+wire ALU_CI;	
+wire WriteSrc, IRWrite, ALUSrcA, AdrSrc;
+wire [1:0] ImmSrc, ALUSrcB, ResultSrc;
+wire [2:0] RegSrc;	
+wire [3:0] ALUControl;
+wire [4:0] shamt;
+wire [1:0] shiftControl;
+wire PCSrc, RegWrite, MemWrite;
+wire ALU_N, ALU_Z, ALU_CO, ALU_OVF;
+wire [3:0] ALUFlags;
+
+assign ALUFlags = {ALU_N, ALU_Z, ALU_CO, ALU_OVF};
+assign ResultS = ResultSrc;
+
+datapath datapath(
+	.clk(clk),
+	.RESET(rst),
+	.MemWrite(MemWrite),
+	.IRWrite(IRWrite),
+	.ALUSrcA(ALUSrcA),
+	.AdrSrc(AdrSrc),
+	.RegWrite(RegWrite),
+	.WriteSrc(WriteSrc),
+	.C_in(ALU_CI),
+	.PCWrite(PCEn),
+	.ALUControl(ALUControl),
+	.ImmSrc(ImmSrc),
+	.RegSrc(RegSrc),
+	.ALUSrcB(ALUSrcB),
+	.ResultSrc(ResultSrc),
+	.shamt(shamt),
+	.sh(shiftControl),
+	.CO(ALU_CO),
+	.OVF(ALU_OVF),
+	.N(ALU_N),
+	.Z(ALU_Z),
+	.Instruction(Instruction),
+	.PC_out(PC_out), .RD1_out(RD1), .RD2_out(RD2),
+	.data_out(data_out)
+);
+
+ControlUnit controlUnit(
+	.rst(rst), .clk(clk),
+	.Op(Instruction[27:26]), 
+	.Funct(Instruction[25:20]), 
+	.Rd(Instruction[15:12]),
+	.shamt5(Instruction[11:7]),
+	.sh(Instruction[6:5]),
+	.L(Instruction[24]), 
+	.bx_inst(Instruction[27:4]),
+	.Cond(Instruction[31:28]),
+	.ALUFlags(ALUFlags),
+	.WriteSrc(WriteSrc), .ALUSrcA(ALUSrcA),
+	.ALUSrcB(ALUSrcB), .ResultSrc(ResultSrc),
+	.AdrSrc(AdrSrc), .IRWrite(IRWrite),
+	.ImmSrc(ImmSrc),
+	.RegSrc(RegSrc),	
+	.ALUControl(ALUControl),
+	.shamt(shamt),
+	.shiftControl(shiftControl),
+	.PCWrite(PCWrite), .RegWrite(RegWrite), .MemWrite(MemWrite),
+	.ALU_CI(ALU_CI),
+	.state_out(state_out));
+	
+endmodule 
